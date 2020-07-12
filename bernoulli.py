@@ -22,7 +22,8 @@ class bernoulli():
         """
         return p*(1-p)
 
-    def std(p,self):
+    @classmethod
+    def std(self, p):
         """
         standard deviation as the square root of variance
         """
@@ -35,7 +36,7 @@ class bernoulli():
         size determines number of generated variates
         """
         rvs = numpy.array([])
-        for i in range(0,size):
+        for i in range(0, size):
             if numpy.random.rand() <= p:
                 a = 1
             else:
